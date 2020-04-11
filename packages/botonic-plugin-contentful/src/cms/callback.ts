@@ -68,7 +68,7 @@ export class ContentCallback extends Callback {
 
   private static checkDeliverableModel(modelType: string): TopContentType {
     if (isOfType(modelType, TopContentType)) {
-      return modelType as TopContentType
+      return modelType
     } else {
       throw new Error(
         `${modelType} is not a model type than can be delivered from CMS`

@@ -1,3 +1,4 @@
+/* eslint-disable no-empty-pattern */
 import { SearchResult } from '../search/search-result'
 import { Callback, ContentCallback } from './callback'
 import { CMS, ContentType, TopContentType } from './cms'

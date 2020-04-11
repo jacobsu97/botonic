@@ -31,15 +31,14 @@ export class SearchByKeywords {
       this.keywordsOptions[locale] || new KeywordsOptions()
     )
     contentsWithKeywords.forEach(content =>
-      kws.addCandidate(content, content.common.keywords!)
+      kws.addCandidate(content, content.common.keywords)
     )
     const results = kws.findCandidatesWithKeywordsAt(inputText)
     return results.map(res => {
-      const candidate = res.candidate as SearchResult
       // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
       // @ts-ignore
-      candidate.match = res.match
-      return candidate
+      res.candidate.match = res.match
+      return res.candidate
     })
   }
 
